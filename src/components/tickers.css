@@ -1,0 +1,11 @@
+.tickers {
+        list-style-type: none;
+        padding: 0;
+        display:flex;
+        flex-flow: row wrap;
+    }
+
+.tickers-container{
+  width:90%;
+  margin:auto;
+}
