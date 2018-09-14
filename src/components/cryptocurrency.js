@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
-    import './cryptocurrency.css';
+import './cryptocurrency.css';
+import { Link } from "react-router-dom";
+
 
     class Cryptocurrency extends Component {
-      handleClick(id){
-        this.props.changeView(id);
+
+      renderTd(content){
+          return (
+              <td>
+                <Link to={ { pathname: `crypto/${this.props.data.id}`, state:  this.props.data} }>
+                  { content } 
+                </Link>
+              </td>
+          )
       }
+
+     
         render() {
             var {
                 id,
@@ -15,16 +26,16 @@ import React, { Component } from 'react';
                 percent_change_24h,
                 percent_change_7d,
             } = this.props.data;
+
+
             return (
-                <li className={"cryptocurrency " + id}>
-                  <a onClick={() => this.handleClick(id)}>
-                    <p className="cryptocurrency-name">{name} ({symbol})</p>
-                    <h1>${ (+price_usd).toFixed(2) }</h1>
-                    <p><span className={percent_change_1h<0 ? "isRed" : "isGreen"}>{percent_change_1h}% </span>1hr</p>
-                    <p><span className={percent_change_24h<0 ? "isRed" : "isGreen"}>{percent_change_24h}% </span>24hrs</p>
-                    <p><span className={percent_change_7d<0 ? "isRed" : "isGreen"}>{percent_change_7d}% </span>7days</p>
-                    </a>
-                </li>
+                    <tr className={"cryptocurrency " + id }>
+                        {this.renderTd(`${name} (${symbol})`)}
+                        {this.renderTd(`$${ (+price_usd).toFixed(2) }`)}
+                        {this.renderTd(<span className={percent_change_1h<0 ? "isRed" : "isGreen"}>{percent_change_1h}% </span>)}
+                        {this.renderTd(<span className={percent_change_24h<0 ? "isRed" : "isGreen"}>{percent_change_24h}% </span>)}
+                        {this.renderTd(<span className={percent_change_7d<0 ? "isRed" : "isGreen"}>{percent_change_7d}% </span>)}                       
+                    </tr>
             );
         }
     }

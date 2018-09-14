@@ -1,0 +1,37 @@
+.crypto-side-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.crypto-detail h1{
+    display: inline-block;
+    font-size: 40px;
+}
+
+.crypto-detail .header{
+    display: flex;
+}
+
+.crypto-side-header p{
+    margin: 0;
+}
+
+.crypto-detail{
+    min-height: 100vh;
+}
+
+.crypto-image{
+    background: url('https://tinobusiness.com/wp-content/uploads/2017/11/shutterstock_310309553-1.jpg');
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 700px;
+    height: 400px;
+}
+
+.cmc-link{
+    color: #3494e6;
+}
