@@ -25,7 +25,7 @@ class CryptoDetail extends Component {
         const { id, name, rank, available_supply, market_cap_usd, price_usd, price_btc } = this.state.data;
         return (
             <div className="crypto-detail container">
-            <Link to="/">Back to index</Link>
+            <Link to="/">(back to index)</Link>
               <div className="header">
                 <h1>{name}</h1>
                 <div className="crypto-side-header">
