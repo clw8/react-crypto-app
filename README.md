@@ -1,4 +1,4 @@
-This was a really fun project, integrating axios with ReactJS. Have a look at the app: https://immense-fortress-44495.herokuapp.com/
+This was a really fun project to build, integrating axios with ReactJS. Have a look at the app: https://immense-fortress-44495.herokuapp.com/
 
 
 _________________________________
